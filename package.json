@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "script": "nodemon index.js"
+    "start": "nodemon index.js"
   },
   "author": "Tahir Ahmed T",
   "license": "ISC",
