@@ -1,0 +1,16 @@
+{
+  "name": "aegis-store-backend",
+  "version": "1.0.0",
+  "description": "Backend for Aegis Store",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "script": "nodemon index.js"
+  },
+  "author": "Tahir Ahmed T",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}
