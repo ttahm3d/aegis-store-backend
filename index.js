@@ -4,8 +4,8 @@ import cors from "cors";
 import { connect } from "./configs/mongoDbConfig.js";
 
 // Defining Routes
-import categoryRoutes from "./routes/category.routes.js";
-import productRoutes from "./routes/product.routes.js";
+import categoryRoutes from "./routes/category.js";
+import productRoutes from "./routes/product.js";
 
 const app = express();
 app.use(express.json());
