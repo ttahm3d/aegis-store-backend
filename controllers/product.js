@@ -46,4 +46,16 @@ const getProducts = async (req, res) => {
   }
 };
 
-export { addProduct, getProducts };
+const getProductById = async (req, res) => {
+  try {
+    const products = await Product.findById(req.params.id);
+    if (!products) {
+      return res.status(200).send({ message: "No Products found" });
+    }
+    res.status(200).send({ products });
+  } catch (error) {
+    res.status(500).send({ message: error.message });
+  }
+};
+
+export { addProduct, getProducts, getProductById };
