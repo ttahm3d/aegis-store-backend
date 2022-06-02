@@ -18,8 +18,8 @@ app.get("/", (req, res) => {
   res.send("message");
 });
 
-app.use("/api/v1/categories", categoryRoutes);
-app.use("/api/v1/products", productRoutes);
+app.use("/api/v1", categoryRoutes);
+app.use("/api/v1", productRoutes);
 
 const port = process.env.PORT || 4000;
 app.listen(port, () => {

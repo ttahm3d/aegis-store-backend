@@ -4,12 +4,12 @@ import {
   addProduct,
   getProducts,
   getProductById,
-} from "../controllers/product.js";
+} from "../controllers/productController.js";
 
-router.get("/", getProducts);
+router.get("/products", getProducts);
 
-router.post("/", addProduct);
+router.post("/products", addProduct);
 
-router.get("/:id", getProductById);
+router.get("/products/:id", getProductById);
 
 export default router;
