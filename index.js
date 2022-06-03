@@ -6,6 +6,7 @@ import { connect } from "./configs/mongoDbConfig.js";
 // Defining Routes
 import categoryRoutes from "./routes/category.js";
 import productRoutes from "./routes/product.js";
+import userRoutes from "./routes/user.js";
 
 const app = express();
 app.use(express.json());
@@ -20,6 +21,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/v1", categoryRoutes);
 app.use("/api/v1", productRoutes);
+app.use("/api/v1", userRoutes);
 
 const port = process.env.PORT || 4000;
 app.listen(port, () => {
