@@ -1,4 +1,4 @@
-import User from "../models/user.js";
+import User from "../models/User.js";
 
 const signup = async (req, res) => {
   const { firstName, lastName, email, password } = req.body;
@@ -17,10 +17,15 @@ const signup = async (req, res) => {
       secure: true,
       samesite: "none",
     };
-    res
-      .status(201)
-      .cookie("token", token, options)
-      .json({ user, token, message: "Singup Successfull" });
+    res.status(201).cookie("token", token, options).json({
+      user: {
+        firstName,
+        lastName,
+        email,
+      },
+      token,
+      message: "Singup Successfull",
+    });
   } catch (error) {
     if (error.code === 11000)
       res.status(500).send({ message: "Email is already in registered" });
