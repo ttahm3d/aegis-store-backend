@@ -25,6 +25,11 @@ const userSchema = mongoose.Schema(
       minlength: 6,
       select: false,
     },
+    wishlist: {
+      type: [mongoose.Schema.Types.ObjectId],
+      ref: "Product",
+      default: [],
+    },
   },
   { timestamps: true }
 );

@@ -8,6 +8,7 @@ import categoryRoutes from "./routes/category.js";
 import productRoutes from "./routes/product.js";
 import userRoutes from "./routes/user.js";
 // import wishlistRoutes from "./routes/wishlist.js";
+import cartRoutes from "./routes/cart.js";
 
 const app = express();
 app.use(express.json());
@@ -23,7 +24,7 @@ app.get("/", (req, res) => {
 app.use("/api/v1", categoryRoutes);
 app.use("/api/v1", productRoutes);
 app.use("/api/v1", userRoutes);
-// app.use("/api/v1", wishlistRoutes);
+app.use("/api/v1", cartRoutes);
 
 const port = process.env.PORT || 4000;
 app.listen(port, () => {
