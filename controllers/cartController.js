@@ -30,9 +30,7 @@ const addItemToCart = async (req, res) => {
 
 const getCartItems = async (req, res) => {
   try {
-    const cartItems = await Cart.find({ user: req.userId })
-      .populate("product")
-      .populate("user");
+    const cartItems = await Cart.find({ user: req.userId }).populate("product");
     return res.status(200).send({ ...cartItems });
   } catch (error) {
     return res.status(400).json(error);
