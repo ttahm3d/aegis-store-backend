@@ -1,4 +1,4 @@
-import User from "../models/User.js";
+import User from "../models/UserModel.js";
 
 const addToWishlist = async (req, res) => {
   try {
